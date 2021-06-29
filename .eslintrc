@@ -1,0 +1,34 @@
+{
+  "plugins": [
+    "react"
+  ],
+  "extends": ["eslint:all", "plugin:react/all"],
+  "rules": {
+    "react/jsx-no-bind": "off",
+    "default-param-last": "off",
+    "no-prototype-builtins": "off",
+    "dot-location": "off",
+    "no-plusplus": "off",
+    "no-magic-numbers": "off",
+    "max-statements": "off",
+    "one-var": "off",
+    "prefer-template": "off",
+    "max-lines-per-function": "off",
+    "react/jsx-newline": "off",
+    "react/jsx-max-depth": "off",
+    "react/jsx-max-props-per-line": "off",
+    "react/jsx-sort-props": "off",
+    "react/prop-types": "off",
+    "react/destructuring-assignment": "off",
+    "no-undefined": "off",
+    "function-call-argument-newline": "off",
+    "arrow-body-style": "off",
+    "array-element-newline": ["error", "never"],
+    "max-len": "off",
+    "arrow-parens": "off",
+    "padded-blocks": "off",
+    "no-console": "off",
+    "func-style": ["error", "declaration"],
+    "react/jsx-curly-brace-presence": ["error", { "props": "never", "children": "always" }]
+  }
+}
