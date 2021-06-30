@@ -1,10 +1,13 @@
 import React from "react";
 
 function DeviceItem (props) {
-    const {item} = props;
+    const {item, isChoosen} = props;
     const deviceId = item.n;
     return (
-        <li>
+        <li onClick={() => {
+            isChoosen(item);
+        }}
+        >
             {deviceId}
         </li>
     );

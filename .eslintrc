@@ -4,6 +4,10 @@
   ],
   "extends": ["eslint:all", "plugin:react/all"],
   "rules": {
+    "capitalized-comments": "off",
+    "multiline-comment-style": "off",
+    "sort-imports": "off",
+    "no-case-declarations": "off",
     "react/jsx-no-bind": "off",
     "default-param-last": "off",
     "no-prototype-builtins": "off",

@@ -10,7 +10,16 @@ function usersData (state = {
         return state;
 
     case "TOGGLE_DEVICE":
-        if (action.device.choosen === true)
+        const isChoosen = state.customData.find(item => item.n === action.device.n);
+        if (isChoosen === undefined) {
+            state.customData = [...state.customData, action.device];
+        }
+        if (isChoosen !== undefined) {
+            const splicedCustomData = [...state.customData];
+            splicedCustomData.splice(state.customData.indexOf(isChoosen), 1);
+            state.customData = splicedCustomData;
+        }
+        return state;
 
     default: return state;
     }
