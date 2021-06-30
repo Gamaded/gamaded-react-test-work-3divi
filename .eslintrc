@@ -4,6 +4,12 @@
   ],
   "extends": ["eslint:all", "plugin:react/all"],
   "rules": {
+    "react/jsx-one-expression-per-line": "off",
+    "object-property-newline": "off",
+    "space-infix-ops": "off",
+    "guard-for-in": "off",
+    "sort-keys": "off",
+    "prefer-destructuring": "off",
     "capitalized-comments": "off",
     "multiline-comment-style": "off",
     "sort-imports": "off",
