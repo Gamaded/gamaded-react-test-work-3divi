@@ -5,20 +5,6 @@ import StatisticOutput from "../components/StatisticOutput";
 import styled from "styled-components";
 import {toggleDevice} from "../store/actions/actions";
 
-const StatisticPageWrapper = styled.section`
-    width: 840px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px auto;
-    padding: 30px 10px;
-    background-color: gray;
-`;
-
-const DevicesList = styled.ul`
-    width: 30%;
-`;
-
 function StatisticPage () {
     const usersDefaultData = useSelector(state => state.defaultData);
     const usersCustomData = useSelector(state => state.customData);
@@ -67,7 +53,20 @@ function StatisticPage () {
             </StatisticPageWrapper>
         );
     }
-
 }
+
+const StatisticPageWrapper = styled.section`
+    width: 840px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    padding: 30px 10px;
+    background-color: #D4D9F0;
+`;
+
+const DevicesList = styled.ul`
+    width: 20%;
+`;
 
 export default StatisticPage;

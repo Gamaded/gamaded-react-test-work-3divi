@@ -3,24 +3,27 @@ import styled from "styled-components";
 
 function GraphItem (props) {
 
-    const {views, color} = props;
+    const {views, color, maxViewsPerWeekday} = props;
     const [elementHeight, setElementHeight] = useState(0);
 
-    const maxValue = 20;
-
     useEffect(() => {
-        setElementHeight(280 / maxValue * views);
+        if (maxViewsPerWeekday !== 0) {
+            setElementHeight(240 / maxViewsPerWeekday * views);
+        }
+        if (maxViewsPerWeekday === 0) {
+            setElementHeight(0);
+        }
     });
 
     return (
-        <StyledGraphItem elementHeight={elementHeight} color={color} />
+        <StyledGraphItem height={elementHeight} color={color} />
     );
 }
 
-const StyledGraphItem = styled.div(styleProps => ({
-    "width": "20%",
-    "height": styleProps.elementHeight + "px",
-    "background-color": styleProps.color,
+const StyledGraphItem = styled.div(graphProps => ({
+    "width": "100%",
+    "height": graphProps.height,
+    "background-color": graphProps.color,
     "transition": "height 0.5s"
 }));
 

@@ -14,30 +14,31 @@ function DeviceItem (props) {
         }
     }
 
-    const StyledDeviceItem = styled.li`
-        width: 100%;
-        margin-bottom: 5px;
-        padding: 7px 0;
-        border: 1px solid black;
-        text-align: center;
-        cursor: pointer;
-        background-color: ${color};
-        transition: background-color 0.5s;
-
-        &:hover {
-            background-color: green;
-        }
-    `;
-
     return (
-        <StyledDeviceItem onClick={() => {
-            setColorOfChoosen();
-            isChoosen(item);
-        }}
+        <StyledDeviceItem
+            color={color}
+            onClick={() => {
+                setColorOfChoosen();
+                isChoosen(item);
+            }}
         >
             {deviceId}
         </StyledDeviceItem>
     );
 }
+
+const StyledDeviceItem = styled.li(styledProps => ({
+    "width": "100%",
+    "margin-bottom": "5px",
+    "padding": "7px 0",
+    "border": "1px solid black",
+    "text-align": "center",
+    "cursor": "pointer",
+    "background-color": styledProps.color,
+    "transition": "background-color 0.5s",
+    "&:hover": {
+        "background-color": "green"
+    }
+}));
 
 export default DeviceItem;
