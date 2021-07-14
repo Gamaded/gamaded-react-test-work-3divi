@@ -65,7 +65,7 @@ const StatisticPageWrapper = styled.section`
     background-color: #D4D9F0;
 `;
 
-const DevicesList = styled.ul`
+const DevicesList = styled.div`
     width: 20%;
 `;
 

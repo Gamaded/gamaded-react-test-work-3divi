@@ -16,6 +16,7 @@ function DeviceItem (props) {
 
     return (
         <StyledDeviceItem
+            disabled={item.v === 0 ? "disabled" : null}
             color={color}
             onClick={() => {
                 setColorOfChoosen();
@@ -27,7 +28,7 @@ function DeviceItem (props) {
     );
 }
 
-const StyledDeviceItem = styled.li(styledProps => ({
+const StyledDeviceItem = styled.button(styledProps => ({
     "width": "100%",
     "margin-bottom": "5px",
     "padding": "7px 0",
@@ -38,6 +39,12 @@ const StyledDeviceItem = styled.li(styledProps => ({
     "transition": "background-color 0.5s",
     "&:hover": {
         "background-color": "green"
+    },
+    "&:disabled": {
+        "cursor": "not-allowed",
+        "&:hover": {
+            "background-color": "unset"
+        }
     }
 }));
 

@@ -4,6 +4,8 @@
   ],
   "extends": ["eslint:all", "plugin:react/all"],
   "rules": {
+    "no-ternary": "off",
+    "multiline-ternary": "off",
     "react/jsx-one-expression-per-line": "off",
     "object-property-newline": "off",
     "space-infix-ops": "off",
