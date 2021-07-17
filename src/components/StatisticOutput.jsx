@@ -41,7 +41,7 @@ function StatisticOutput (props) {
 
     return (
         <StatisticOutputStyled>
-            <h3>{"Total views: Age (by dau of week)"}</h3>
+            <h3>{"Total views: Age (by day of week)"}</h3>
             <GraphPlaneAndValues>
                 <GraphPlane>
                     <StatisticOutputWeekday weekdayData={devicesDataByWeekday["0"]} maxViewsPerWeekday={maxViewsPerWeekday} />
