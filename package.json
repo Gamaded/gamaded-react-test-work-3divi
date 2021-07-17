@@ -2,7 +2,7 @@
   "name": "react-test-work-3divi",
   "version": "0.1.0",
   "private": true,
-  "homepage": "Gamaded.github.io/emptyRep",
+  "homepage": "Gamaded.github.io/react-test-work-3divi",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
